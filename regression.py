@@ -23,7 +23,7 @@ def main():
     # Get Datasets In a List
     membList = []
     workDir = "C:\\Users\\" + userID + "\\"
-    dataSet = "MEDEV.REGRESS.SUITE.TEMP"
+    dataSet = "DEv"
     members = zowe.getPDSMembers(dataSet)
     membList = members.split('\n')
     #print("List of datasets:" + str(membList[2]))
@@ -54,7 +54,7 @@ def executeJCL(job, pdsName):
 def verifyRC(job, userDirectory):
 
     outFile = userDirectory + job + '.txt'    
-    outdataSet = "MEDEV.REG.VIEWS.REGRSS.FINOUT"
+    outdataSet = "DEV"
     testCaseSfx = job[5:] 
     
     if zowe.downloadPDSContent(outdataSet, job, userDirectory): 
