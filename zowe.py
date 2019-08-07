@@ -39,7 +39,7 @@ def downloadPDSMembers(pdsName, toDir, ext = "txt", issuesErrorMessages = True):
     else:
         return False 
 
-#downloadPDSMembers("N089338.ZOWE.COPY.LIBRARY.PDS", "copyb", "")
+#downloadPDSMembers("")
 
 def submitLocal(jclName,  issuesErrorMessages = True):
     result = run("zowe jobs sub lf  " + jclName + " --rfj", issuesErrorMessages)
